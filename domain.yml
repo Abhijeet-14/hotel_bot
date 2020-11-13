@@ -76,4 +76,5 @@ responses:
   - text: Sure, I have scheduled a cleaning for 5 pm today.
   utter_please_rephrase:
   - text: "I'm sorry, I didn't understand. \nCould you please rephrase your message?"
-  
+  utter_default:
+  - text: can't understand you!
