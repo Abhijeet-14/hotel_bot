@@ -2,79 +2,165 @@
 #### If you want to learn more, please see the docs: https://rasa.com/docs/rasa/testing-your-assistant
 
 stories:
-- story: happy path 1
+- story: room path 1
   steps:
   - user: |
       hello there!
     intent: greet
   - action: utter_greet
   - user: |
-      amazing
-    intent: mood_great
-  - action: utter_happy
+      I want to book a room
+    intent: book_room
+  - action: utter_num_of_rooms
+  - action: utter_room_type
+  - user: |
+      I'll take deluxe
+  - intent: room_type_deluxe
+  - action: utter_booked_deluxe
+  - action: utter_thanks
 
-- story: happy path 2
+
+
+- story: room path 2
   steps:
   - user: |
       hello there!
     intent: greet
   - action: utter_greet
   - user: |
-      amazing
-    intent: mood_great
-  - action: utter_happy
+      I want to book a room
+    intent: book_room
+  - action: utter_num_of_rooms
+  - action: utter_room_type
+  - user: |
+      I'll take Simple
+  - intent: room_type_simple
+  - action: utter_booked_simple
+  - action: utter_thanks
+
+
+- story: clean now path 1
+  steps:
+  - user: |
+      hello there!
+    intent: greet
+  - action: utter_greet
+  - user: |
+      clean room
+    intent: clean_room
+  - action: utter_clean_room
+  - user: |
+     right now
+  - intent: clean_room_now
+  - action: utter_clean_room_now
   - user: |
       bye-bye!
     intent: goodbye
   - action: utter_goodbye
 
-- story: sad path 1
-  steps:
-  - user: |
-      hello
-    intent: greet
-  - action: utter_greet
-  - user: |
-      not good
-    intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - user: |
-      yes
-    intent: affirm
-  - action: utter_happy
 
-- story: sad path 2
+- story: clean now path 1
   steps:
   - user: |
-      hello
-    intent: greet
-  - action: utter_greet
+      I want to have my room cleaned 
+    intent: clean_room
+  - action: utter_clean_room
   - user: |
-      not good
-    intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
+     right now
+  - intent: clean_room_now
+  - action: utter_clean_room_now
   - user: |
-      not really
-    intent: deny
+      bye-bye!
+    intent: goodbye
   - action: utter_goodbye
 
-- story: sad path 3
+
+
+- story: clean later path 1
   steps:
   - user: |
-      hi
+      hello there!
     intent: greet
   - action: utter_greet
   - user: |
-      very terrible
-    intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
+      clean room
+    intent: clean_room
+  - action: utter_clean_room
   - user: |
-      no
-    intent: deny
+     after 2 hours
+  - intent: clean_room_later
+  - action: utter_clean_room_later
+  - user: |
+      bye-bye!
+    intent: goodbye
   - action: utter_goodbye
+
+
+
+
+- story: clean later path 2
+  steps:
+  - user: |
+      I want to have my room cleaned
+    intent: clean_room
+  - action: utter_clean_room
+  - user: |
+     after 2 hours
+  - intent: clean_room_later
+  - action: utter_clean_room_later
+  - user: |
+      bye-bye!
+    intent: goodbye
+  - action: utter_goodbye
+
+
+
+
+- story: check in
+  steps:
+  - user: |
+      check in
+    intent: faq/chcek_in
+  - action: utter_faq
+
+- story: check out
+  steps:
+  - user: |
+      check out
+    intent: faq/chcek_out
+  - action: utter_faq
+
+
+- story: restaurant
+  steps:
+  - user: |
+      restaurant
+    intent: faq/restaurant
+  - action: utter_faq
+
+
+- story: restaurant timing
+  steps:
+  - user: |
+      restaurant timing
+    intent: faq/restaurant_time
+  - action: utter_faq
+
+
+- story: breakfast
+  steps:
+  - user: |
+      breakfast
+    intent: faq/breakfast
+  - action: utter_faq
+
+- story: breakfast time
+  steps:
+  - user: |
+      breakfast timing
+    intent: faq/breakfast_time
+  - action: utter_faq
+
 
 - story: say goodbye
   steps:

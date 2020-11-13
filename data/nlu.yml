@@ -71,9 +71,95 @@ nlu:
 - intent: room_type_simple
   examples: |
     - Simple
+    - I'll take simple
     - simple
+    - I'll choose simple
 
 - intent: room_type_deluxe
   examples: |
     - deluxe
     - Deluxe
+    - I'll take deluxe
+    - I'll choose deluxe
+
+
+- intent: faq/check_in
+  examples: |
+    - check in 
+    - check in timing
+    - What are your check in timings?
+    - check-in
+
+- intent: faq/check_out
+  examples: |
+    - check out 
+    - check out timing
+    - What are your check out timings?
+    - check-out
+
+- intent: faq/restaurant
+  examples: |
+    - restaurant?
+    - Does the hotel have a restaurant?
+    - have restaurant?
+    - restaurant avaialble 
+
+- intent: faq/restaurant_time
+  examples: |
+    - what are the timing of your restaurant?
+    - restaurant timeing
+
+
+- intent: faq/breakfast
+  examples: |
+    - breakfast?
+    - Does the hotel offer breakfast?
+    - have breakfast?
+    - breakfast avaialble 
+
+- intent: faq/breakfast_time
+  examples: |
+    - what are the timing of breakfast?
+    - what are the breakfast timings?
+    - breakfast time
+    - breakfast timing
+    - breakfast open at
+    - opeing breakfast
+
+- intent: faq/cancel_reservation
+  examples: |
+    - reservation cancel
+    - cancel reservation
+    - How do I cancel a reservation?
+    - I want to cancel my reservation!
+
+- intent: faq/cancel_policy
+  examples: |
+    - policy cancel
+    - cancellation policy
+    - What is your cancellation policy?
+    - show me your cancellation policy!
+
+- intent: clean_room
+  examples: |
+    - I want to have my room cleaned
+    - room cleaning
+    - like to clean my room
+    - cleaning?
+    - schedule room cleaning
+
+- intent: clean_room_now
+  examples: |
+    - Could you send someone right now?
+    - right now
+    - send someone right now
+    - now
+    - urgent
+
+- intent: clean_room_later
+  examples: |
+    - Could you send someone after 2 hours?
+    - later
+    - sometime later
+    - after 2 hours
+    - after hours365w2d4q1s
